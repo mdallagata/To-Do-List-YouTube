@@ -29,16 +29,15 @@ body {
   position: absolute;
   right: 20px;
   top: 20px;
-}
-
-.clear i {
-  font-size: 30px;
-  color: #fff;
-}
-.clear i:hover {
-  cursor: pointer;
-  text-shadow: 1px 3px 5px #000;
-  transform: rotate(45deg);
+  i {
+    font-size: 30px;
+    color: #fff;
+    &:hover {
+      cursor: pointer;
+      text-shadow: 1px 3px 5px #000;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 #date {
