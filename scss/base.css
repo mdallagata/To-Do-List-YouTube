@@ -32,11 +32,6 @@ body {
   top: 20px;
 }
 
-.clear:i {
-  font-size: 30px;
-  color: #fff;
-}
-
 .clear i {
   font-size: 30px;
   color: #fff;
@@ -67,13 +62,13 @@ body {
   overflow: auto;
 }
 
-.content::-webkit-scrollbar {
-  display: none;
-}
-
 .content ul {
   padding: 0;
   margin: 0;
+}
+
+.content ::-webkit-scrollbar {
+  display: none;
 }
 
 .item {
@@ -99,10 +94,6 @@ body {
   cursor: pointer;
 }
 
-.fa-check-circle {
-  color: #6eb200;
-}
-
 .item p.text {
   position: absolute;
   padding: 0;
@@ -112,11 +103,6 @@ body {
   top: 5px;
   background-color: #fff;
   max-width: 285px;
-}
-
-.lineThrough {
-  text-decoration: line-through;
-  color: #ccc;
 }
 
 .item i.de {
@@ -129,6 +115,15 @@ body {
 .item i.de:hover {
   color: #af0000;
   cursor: pointer;
+}
+
+.fa-check-circle {
+  color: #6eb200;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  color: #ccc;
 }
 
 /* ------------ add item ------------ */
