@@ -1,24 +1,14 @@
-/* ------------ youtube.com/CodeExplained ------------ */
-body {
-  padding: 0;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.1);
-  font-family: "Titillium Web", sans-serif;
-}
-
-/* ------------ container ------------ */
 .container {
   padding: 10px;
   width: 380px;
   margin: 0 auto;
 }
 
-/* ------------ header ------------ */
 .header {
   width: 380px;
   height: 200px;
   background-image: url("../img/bg2.jpg");
-  background-size: 100% 200%;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px 15px 0 0;
   position: relative;
@@ -53,7 +43,6 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
-/* ------------ content ------------ */
 .content {
   width: 380px;
   height: 350px;
@@ -76,7 +65,7 @@ body {
   height: 45px;
   min-height: 45px;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.102);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -126,14 +115,13 @@ body {
   color: #ccc;
 }
 
-/* ------------ add item ------------ */
 .add-to-do {
   position: relative;
   width: 360px;
   height: 40px;
   background-color: #fff;
   padding: 10px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.102);
 }
 
 .add-to-do i {
@@ -179,5 +167,12 @@ body {
   color: #4162f6;
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.102);
+  font-family: "Titillium Web", sans-serif;
 }
 /*# sourceMappingURL=base.css.map */
