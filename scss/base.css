@@ -71,7 +71,7 @@
   margin: 0;
 }
 
-.item i.co {
+.item i.circle {
   position: absolute;
   font-size: 25px;
   padding-left: 5px;
@@ -79,11 +79,11 @@
   top: 10px;
 }
 
-.item i.co:hover {
+.item i.circle:hover {
   cursor: pointer;
 }
 
-.item p.text {
+.item p {
   position: absolute;
   padding: 0;
   margin: 0;
@@ -94,14 +94,14 @@
   max-width: 285px;
 }
 
-.item i.de {
+.item i.delete {
   position: absolute;
   font-size: 25px;
   right: 15px;
   top: 10px;
 }
 
-.item i.de:hover {
+.item i.delete:hover {
   color: #af0000;
   cursor: pointer;
 }
@@ -139,34 +139,6 @@
   border: none;
   font-size: 20px;
   padding-left: 10px;
-}
-
-.add-to-do input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #4162f6;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 20px;
-}
-
-.add-to-do input::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #4162f6;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 20px;
-}
-
-.add-to-do input:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #4162f6;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 20px;
-}
-
-.add-to-do input:-moz-placeholder {
-  /* Firefox 18- */
-  color: #4162f6;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 20px;
 }
 
 body {
