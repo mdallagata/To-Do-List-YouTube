@@ -83,7 +83,7 @@ function removeToDo(element) {
 // target the items created dynamically
 list.addEventListener("click", function (event) {
     var element = event.target; // return the clicked element inside list
-    var elementJob = element.attributes.job.value; // complet or delete
+    var elementJob = element.attributes.job.value; // complete or delete
     if (elementJob == "complete") {
         completeToDo(element);
     }
