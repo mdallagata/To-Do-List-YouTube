@@ -33,7 +33,7 @@ function loadList(array) {
   });
 }
 
-//clear the local storage
+// clear the local storage
 clear.addEventListener("click", function () {
   localStorage.clear();
   location.reload();

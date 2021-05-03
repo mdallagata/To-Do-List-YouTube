@@ -28,7 +28,7 @@ function loadList(array) {
         addToDo(item.name, item.id, item.done, item.trash);
     });
 }
-//clear the local storage
+// clear the local storage
 clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
