@@ -53,9 +53,9 @@ function addToDo(toDo, id, done, trash) {
   const LINE = done ? LINE_THROUGH : "";
 
   const item = `<li class="item">
-   <i class="fa ${DONE} co" job="complete" id="${id}"></i>
-    <p class="text ${LINE}">${toDo}</p>
-    <i class="fa fa-trash-o de" job="delete" id="${id}"></i>
+   <i class="fa ${DONE} circle" job="complete" id="${id}"></i>
+    <p ${LINE}">${toDo}</p>
+    <i class="fa fa-trash-o delete" job="delete" id="${id}"></i>
     </li>`;
   const position = "beforeend";
   list.insertAdjacentHTML(position, item);
