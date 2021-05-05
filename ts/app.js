@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 // Select the Elements
 var clear = document.querySelector(".clear");
 var dateElement = document.getElementById("date");
@@ -34,7 +36,11 @@ clear.addEventListener("click", function () {
     location.reload();
 });
 // Show todays date
-var options = { weekday: "long", month: "short", day: "numeric" };
+var options = {
+    weekday: "long",
+    month: "short",
+    day: "numeric"
+};
 var today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 // add to do function

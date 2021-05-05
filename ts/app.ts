@@ -1,8 +1,10 @@
+import { TimeOptions } from "./interfaces";
+
 // Select the Elements
 const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
-const input = document.getElementById("input");
+const input = document.getElementById("input") as HTMLInputElement;
 
 //Classes names
 const CHECK = "fa-check-circle";
@@ -40,7 +42,11 @@ clear.addEventListener("click", function () {
 });
 
 // Show todays date
-const options = { weekday: "long", month: "short", day: "numeric" };
+const options: TimeOptions = {
+  weekday: "long",
+  month: "short",
+  day: "numeric",
+};
 const today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
@@ -103,7 +109,7 @@ function removeToDo(element) {
 
 // target the items created dynamically
 list.addEventListener("click", function (event) {
-  const element = event.target; // return the clicked element inside list
+  const element = event.target as any; // return the clicked element inside list
   const elementJob = element.attributes.job.value; // complete or delete
 
   if (elementJob == "complete") {
