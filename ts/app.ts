@@ -12,7 +12,9 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough";
 
 // Variables
-let LIST, id;
+let LIST: { name: string; id: number; done: boolean; trash: boolean }[]; // question, hace falta poner las llaves? asi
+//let LIST: [];
+let id: number;
 
 // get item form localstorage
 let data = localStorage.getItem("TODO");

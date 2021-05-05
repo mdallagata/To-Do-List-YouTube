@@ -10,7 +10,9 @@ var CHECK = "fa-check-circle";
 var UNCHECK = "fa-circle-thin";
 var LINE_THROUGH = "lineThrough";
 // Variables
-var LIST, id;
+var LIST; // question, hace falta poner las llaves? asi
+//let LIST: [];
+var id;
 // get item form localstorage
 var data = localStorage.getItem("TODO");
 // check if data is not empty
