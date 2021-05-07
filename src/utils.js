@@ -7,6 +7,7 @@ export function clearLocalStorage() {
 export function addItem(event, id) {
     if (event.keyCode == 13) {
         const toDo = input.value;
+        // if the input isn't empty
         if (toDo) {
             addToDo(toDo, id, false, false);
             LIST.push({
@@ -15,6 +16,7 @@ export function addItem(event, id) {
                 done: false,
                 trash: false,
             });
+            // add item form localstorage ( this code mut be added where the LIST array is updated)
             localStorage.setItem("TODO", JSON.stringify(LIST));
             id++;
         }
@@ -22,13 +24,14 @@ export function addItem(event, id) {
     }
 }
 export function targetItem(event) {
-    const element = event.target;
-    const elementJob = element.attributes.job.value;
+    const element = event.target; // return the clicked element inside list
+    const elementJob = element.attributes.job.value; // complete or delete
     if (elementJob == "complete") {
         completeToDo(element);
     }
     else if (elementJob == "delete") {
         removeToDo(element);
     }
+    // add item form localstorage ( this code mut be added where the LIST array is updated)
     localStorage.setItem("TODO", JSON.stringify(LIST));
 }
