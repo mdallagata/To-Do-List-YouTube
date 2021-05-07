@@ -3,28 +3,28 @@ import { addItem, clearLocalStorage, targetItem } from "./utils.js";
 // Variables
 export let LIST = [];
 let id = 0;
-// get item form localstorage
+// traer item del localstorage
 let data = localStorage.getItem("TODO");
-// check if data is not empty
+// checkear que data no este vacío
 if (data) {
     LIST = JSON.parse(data);
-    id = LIST.length; // set the id to the last one in the list
-    loadList(LIST); // load the list to the user interface
+    id = LIST.length; // le asigna al id a el último de la lista
+    loadList(LIST); // carga la lista en la pantalla
 }
 else {
-    // if date isn't empty
+    // si la lista esta vacía
     LIST = [];
     id = 0;
 }
-// load items to the user's interface
+// carga los items a la interfaz de usuario
 function loadList(array) {
     array.forEach((item) => {
         addToDo(item.name, item.id, item.done, item.trash);
     });
 }
-// Show todays date
-dateElement.innerHTML = today.toLocaleDateString("en-US", options);
-// add to do function
+// Muesta la fecha de hoy
+dateElement.innerHTML = today.toLocaleDateString("es-AR", options);
+// add to do
 export function addToDo(toDo, id, done, trash) {
     if (trash) {
         return;
@@ -53,9 +53,9 @@ export function removeToDo(element) {
     LIST[element.id].trash = true;
 }
 // EVENT LISTENERS
-// clear the local storage
+// limpia el local storage
 clear === null || clear === void 0 ? void 0 : clear.addEventListener("click", clearLocalStorage);
-// add an item to the list using the enter key
+// agrega un item a la lista usando la tecla 'enter'
 document.addEventListener("keyup", (event) => addItem(event, id));
-// target the items created dynamically
+// target a los items creados automaticamente
 list === null || list === void 0 ? void 0 : list.addEventListener("click", (event) => targetItem(event));

@@ -12,6 +12,7 @@
     display: none;
   }
 }
+
 .item {
   width: 380px;
   height: 45px;
@@ -52,9 +53,11 @@
     }
   }
 }
+
 .fa-check-circle {
   color: $green;
 }
+
 .lineThrough {
   text-decoration: line-through;
   color: $grey-dark;
