@@ -10,7 +10,7 @@ export function addItem(event: KeyboardEvent, id: number) {
   if (event.keyCode == 13) {
     const toDo = input.value;
 
-    // if the input isn't empty
+    // si el input no esta vacío
     if (toDo) {
       addToDo(toDo, id, false, false);
 
@@ -21,7 +21,7 @@ export function addItem(event: KeyboardEvent, id: number) {
         trash: false,
       });
 
-      // add item form localstorage ( this code mut be added where the LIST array is updated)
+      // agrega un item del localstorage (este código debe ser agregado donde LIST sea actualizado)
       localStorage.setItem("TODO", JSON.stringify(LIST));
 
       id++;
@@ -31,8 +31,8 @@ export function addItem(event: KeyboardEvent, id: number) {
 }
 
 export function targetItem(event: MouseEvent) {
-  const element = event.target as any; // return the clicked element inside list
-  const elementJob = element.attributes.job.value; // complete or delete
+  const element = event.target as any; // devuelve el elemento clickeado dentro de la lista
+  const elementJob = element.attributes.job.value; // complete o delete
 
   if (elementJob == "complete") {
     completeToDo(element);
@@ -40,6 +40,6 @@ export function targetItem(event: MouseEvent) {
     removeToDo(element);
   }
 
-  // add item form localstorage ( this code mut be added where the LIST array is updated)
+  // agrega un item del localstorage (este código debe ser agregado donde LIST sea actualizado)
   localStorage.setItem("TODO", JSON.stringify(LIST));
 }
