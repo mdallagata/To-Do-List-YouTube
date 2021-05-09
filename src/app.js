@@ -41,10 +41,9 @@ export function addToDo(toDo, id, done, trash) {
 }
 // complete to do
 export function completeToDo(element) {
-    var _a, _b;
     element.classList.toggle(CHECK);
     element.classList.toggle(UNCHECK);
-    (_b = (_a = element.parentNode) === null || _a === void 0 ? void 0 : _a.querySelector(".text")) === null || _b === void 0 ? void 0 : _b.classList.toggle(LINE_THROUGH);
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
     LIST[element.id].done = LIST[element.id].done ? false : true;
 }
 // remove to do

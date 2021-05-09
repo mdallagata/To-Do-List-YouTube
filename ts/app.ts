@@ -65,7 +65,7 @@ export function addToDo(
 export function completeToDo(element: ElementInterface) {
   element.classList.toggle(CHECK);
   element.classList.toggle(UNCHECK);
-  element.parentNode?.querySelector(".text")?.classList.toggle(LINE_THROUGH);
+  element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
 
   LIST[element.id].done = LIST[element.id].done ? false : true;
 }
